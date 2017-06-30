@@ -1,0 +1,11 @@
+{
+    "featureflowExampleAngularOneJavaApp": {
+        "AccountType" : {
+            "null": "",
+            "SAVINGS": "SAVINGS",
+            "CREDIT": "CREDIT",
+            "CHEQUE": "CHEQUE",
+            "MORTGAGE": "MORTGAGE"
+        }
+    }
+}

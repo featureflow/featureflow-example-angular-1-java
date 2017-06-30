@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="featureflowExampleAngularOneJavaApp.transactionAccount.detail.title">Transaction Account</span> {{vm.transactionAccount.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="featureflowExampleAngularOneJavaApp.transactionAccount.name">Name</span></dt>
+        <dd>
+            <span>{{vm.transactionAccount.name}}</span>
+        </dd>
+        <dt><span data-translate="featureflowExampleAngularOneJavaApp.transactionAccount.balance">Balance</span></dt>
+        <dd>
+            <span>{{vm.transactionAccount.balance}}</span>
+        </dd>
+        <dt><span data-translate="featureflowExampleAngularOneJavaApp.transactionAccount.type">Type</span></dt>
+        <dd>
+            <span>{{vm.transactionAccount.type}}</span>
+        </dd>
+        <dt><span data-translate="featureflowExampleAngularOneJavaApp.transactionAccount.accountType">Account Type</span></dt>
+        <dd>
+            <span data-translate="{{'featureflowExampleAngularOneJavaApp.AccountType.' + vm.transactionAccount.accountType}}">{{vm.transactionAccount.accountType}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="transaction-account-detail.edit({id:vm.transactionAccount.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

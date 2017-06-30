@@ -1,0 +1,10 @@
+{
+    "featureflowExampleAngularOneJavaApp": {
+        "Tier" : {
+            "null": "",
+            "GOLD": "GOLD",
+            "SILVER": "SILVER",
+            "BRONZE": "BRONZE"
+        }
+    }
+}

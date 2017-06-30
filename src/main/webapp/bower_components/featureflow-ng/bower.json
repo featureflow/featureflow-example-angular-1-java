@@ -1,0 +1,23 @@
+{
+  "name": "featureflow-ng",
+  "description": "Featureflow Angular Provider",
+  "main": "./featureflow-ng.js",
+  "authors": [
+    "Featureflow <featureflow@featureflow.io>"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "featureflow",
+    "feature",
+    "analytics",
+    "client"
+  ],
+  "homepage": "https://github.com/featureflow/featureflow-ng-bower",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

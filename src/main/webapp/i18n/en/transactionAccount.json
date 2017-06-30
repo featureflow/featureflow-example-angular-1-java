@@ -1,0 +1,24 @@
+{
+    "featureflowExampleAngularOneJavaApp": {
+        "transactionAccount" : {
+            "home": {
+                "title": "Transaction Accounts",
+                "createLabel": "Create a new Transaction Account",
+                "createOrEditLabel": "Create or edit a Transaction Account"
+            },
+            "created": "A new Transaction Account is created with identifier {{ param }}",
+            "updated": "A Transaction Account is updated with identifier {{ param }}",
+            "deleted": "A Transaction Account is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Transaction Account {{ id }}?"
+            },
+            "detail": {
+                "title": "Transaction Account"
+            },
+            "name": "Name",
+            "balance": "Balance",
+            "type": "Type",
+            "accountType": "Account Type"
+        }
+    }
+}

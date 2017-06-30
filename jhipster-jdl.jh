@@ -1,0 +1,37 @@
+entity Client {
+	name String,
+    age Long,
+    tier Tier
+}
+
+entity TransactionAccount {
+	name String,
+    balance Long,
+    type String
+    accountType AccountType
+}
+
+entity Transaction {
+	name String,
+    description String,
+    amount Long
+}
+
+enum AccountType {
+    SAVINGS, CREDIT, CHEQUE, MORTGAGE
+}
+
+enum Tier {
+    GOLD, SILVER, BRONZE
+}
+
+
+// Set pagination options
+paginate Transaction, TransactionAccount with infinite-scroll
+paginate Client with pagination
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+

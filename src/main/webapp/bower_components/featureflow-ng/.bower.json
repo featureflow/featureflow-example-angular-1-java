@@ -1,0 +1,33 @@
+{
+  "name": "featureflow-ng",
+  "description": "Featureflow Angular Provider",
+  "main": "./featureflow-ng.js",
+  "authors": [
+    "Featureflow <featureflow@featureflow.io>"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "featureflow",
+    "feature",
+    "analytics",
+    "client"
+  ],
+  "homepage": "https://github.com/featureflow/featureflow-ng-bower",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "0.6.2",
+  "_release": "0.6.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.6.2",
+    "commit": "e4ccb999ba8fb209630e96459ea65070f87cab57"
+  },
+  "_source": "https://github.com/featureflow/featureflow-ng-bower.git",
+  "_target": "0.6.2",
+  "_originalSource": "featureflow-ng"
+}
