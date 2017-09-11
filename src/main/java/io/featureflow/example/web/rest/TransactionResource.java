@@ -3,7 +3,6 @@ package io.featureflow.example.web.rest;
 import com.codahale.metrics.annotation.Timed;
 import io.featureflow.client.FeatureflowClient;
 import io.featureflow.example.config.featureflow.FeatureKeys;
-import io.featureflow.example.config.featureflow.FeatureflowContextHelper;
 import io.featureflow.example.service.TransactionService;
 import io.featureflow.example.web.rest.util.HeaderUtil;
 import io.featureflow.example.web.rest.util.PaginationUtil;
@@ -38,12 +37,10 @@ public class TransactionResource {
 
     private final TransactionService transactionService;
     private final FeatureflowClient featureflowClient;
-    private final FeatureflowContextHelper featureflowContextHelper;
 
-    public TransactionResource(TransactionService transactionService, FeatureflowClient featureflowClient, FeatureflowContextHelper featureflowContextHelper) {
+    public TransactionResource(TransactionService transactionService, FeatureflowClient featureflowClient) {
         this.transactionService = transactionService;
         this.featureflowClient = featureflowClient;
-        this.featureflowContextHelper = featureflowContextHelper;
     }
 
     /**
@@ -126,7 +123,7 @@ public class TransactionResource {
     @DeleteMapping("/transactions/{id}")
     @Timed
     public ResponseEntity<Void> deleteTransaction(@PathVariable Long id) {
-        if(featureflowClient.evaluate(FeatureKeys.delete_transactions.key(), featureflowContextHelper.getBaseContext().build()).isOff()){
+        if(featureflowClient.evaluate(FeatureKeys.delete_transactions.key(), "").isOff()){
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert(ENTITY_NAME, "disabled", "Deleting entities is currently disabled")).body(null);
         }
         log.debug("REST request to delete Transaction : {}", id);
