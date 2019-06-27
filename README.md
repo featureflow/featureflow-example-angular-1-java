@@ -14,7 +14,7 @@ We demonstrate here how we use featureflow in the javascript client and on the s
 Client Side:
 1. We import featureflow in the bower.json 
     ```
-    "featureflow-ng": "0.6.1",
+    "featureflow-ng": "1.3.3",
     ```
 2. 'gulp build' calls gulp-inject to add the featureflow-ng js file to the index.html
     ```
@@ -30,7 +30,7 @@ Client Side:
         .run(run);
     ```
 4. Configure it in app.module.js config method. This will ensure we have an initial set of featureflow controls.
-To set it up for your project copy your 'JavaScript Environment Api Key' into the variable FF_API_KEY below:
+To set it up for your project copy your 'JS Client Environment SDK Key' into the variable FF_API_KEY below:
     ```
         angular
             .module('featureflowExampleAngularOneJavaApp')
@@ -55,7 +55,7 @@ To set it up for your project copy your 'JavaScript Environment Api Key' into th
     ```
 8. When the user logs in we reevaluate the context to get user-specific values - in auth.service.js authThen:
     ```
-    var context = {
+    var user = {
         key: Principal,
         values: {
             admin: $rootScope.account.isAdmin,
