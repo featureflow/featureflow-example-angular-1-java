@@ -57,7 +57,7 @@ To set it up for your project copy your 'JS Client Environment SDK Key' into the
     ```
     var user = {
         key: Principal,
-        values: {
+        attributes: {
             admin: $rootScope.account.isAdmin,
             name: acc.firstName + " " + acc.lastName,
             company: acc.company,
@@ -65,7 +65,7 @@ To set it up for your project copy your 'JS Client Environment SDK Key' into the
             state: acc.state
         }
     };
-    featureflow.updateContext(context);
+    featureflow.updateUser(user);
     ```
 
 
